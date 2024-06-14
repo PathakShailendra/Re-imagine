@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "BMWTypeNext Pro Light";
+    font-family: "Neue Haas Grotesk Display Pro";
 }
 
 html,body{
@@ -12,149 +12,115 @@ html,body{
     /* cursor: pointer; */
 }
 
-#hit-1{
+#loader{
     height: 100vh;
     width: 100%;
-}
-
-#hit-2{
-    height: 100vh;
-    width: 100%;
-}
-
-#page1{
-    height: 100vh;
-    width: 100%;
-    display: initial;
-}
-
-.logo-video{
-    height: 100vh;
-    width: 100vw;
-}
-
-.logo-video #video{
-    height: 100%;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #fff;
+    gap: 10px;
+    display: none;
+  }
+
+  #loader h3{
+    font-weight: 100;
+    font-size: 2vw;
+  }
+
+
+#hit-1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#hit1 video{
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
 
 
-
-
-/* //-------------------------------------- */
-#page2{
-    height: 100%;
-    width: 100%;
-    display: none;
-}
-nav {
+nav{
     position: fixed;
-    /* background-color: rgb(0, 255, 68); */
     display: flex;
-    align-items:flex-start;
-    height: 13vh;
+    align-items: flex-start;
+    height: 12vh;
     width: 100%;
-    padding: 1vw 10.4vw;
-    justify-content:space-evenly;
-    background-color: #000000;
-    background: transparent;
-    z-index: 99;
-}
-#nav-logo img{
-    /* padding-top: 1px; */
-    height: 71px;
-    width: 155px;
+    padding: 2vw 10.4vw;
+    justify-content: space-between;
+    z-index: 10;
+    background-color: transparent;
 }
 
+nav h1{
+    font-size: 1.6w;
+}
 
-
-#nav-part2 {
+nav .nav-part2{
     display: flex;
     gap: 2vw;
     align-items: flex-start;
     padding: 1vh 0;
-    /* justify-content: center; */
-    justify-content: space-between;
     position: relative;
     z-index: 10;
 }
-#nav-ele{
-    top: 20px;
-    margin-top: 13px;
 
-}
-#nav-part2 h4 {
-    font-size:1.2vw;
+nav .nav-part2 h4{
+    font-size: 0.9vw;
     text-transform: uppercase;
     font-weight: 600;
-    margin-bottom: 2.3vw;
-    cursor: pointer;
-
-
+    margin-bottom: 2.6vw;
 }
 
-#nav-part2 h5 {
-    margin-bottom: 0.6vw;
-    /* background-color: red; */
+.nav-part2 h5{
+    margin-bottom: 0.8vw;
     display: none;
-    cursor: pointer;
-
     overflow: hidden;
 }
 
-#nav-part2 h5 span {
+.nav-part2 h5 span{
     font-size: 0.77vw;
     font-weight: 400;
     transform: translateY(25px);
     display: inline-block;
 }
 
-
-.icons {
+nav button{
+    background-color: #0DA34E;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    gap: 10px;
-    background: transparent;
-    margin-top: 13px;
-
-  }
-  
-  .icons {
-    background: transparent;
-    font-size: 17px;
-    margin-left: 70px;
-  }
-
-
-#nav-bottom {
-    width: 79%;
-    height: 0vh;
-    position: absolute;
-    /* background-color: red; */
-    top: 100%;
-    background-color: #000000;
-    z-index: 9;
-    border-bottom: 1px solid #fff;
-    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 0.85vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 50px;
+    border: none;
 }
 
-video {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: 1;
-    /* position: fixed; */
-  }
+nav button svg{
+    height: 0.85vw;
+    margin-left: 1.6vw;
+}
 
+#nav-bottom{
+    width: 80%;
+    height: 0vh;
+    /* background-color: #000; */
+    background-color: transparent;
+    position: absolute;
+    top: 100%;
+    z-index: 9;
+    border-bottom: 1px solid #fff;
+}
 
-
-  #about{
+#about{
     position:absolute;
     top: 0;
     left: 0;
@@ -165,10 +131,10 @@ video {
 
 
 #page21{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.525);
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     align-items:center ;
@@ -205,29 +171,20 @@ video {
 
 
 
+/* -----------------------------------------------------------------------------/ */
 
-
-
-
-
-
-
+#hit-2{
+    height: 100vh;
+    width: 100%;
+}
 
 
 /* ------------------------------------------------------------------------------------------ */
 /* Slider Section Styling */
 
-#page3{
-    height: 100vh;
-    width: 100vw;
-}
-
-
-
 .slider{
-    height: 100vh;
-    margin-top: -50px;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
     position: relative;
 }
@@ -606,4 +563,333 @@ video {
 
 #model-btn>h4:hover a{
     color: #fff;
+}
+
+/* ------------ Greeting Section ------------ */
+
+#hit-4{
+    min-height: 100vh;
+    width: 100%;
+    background-color:#FFFFFF;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5vw 9vw; 
+}
+
+#page4-cursor{
+    height: 7.5vw;
+    width: 7.5vw;
+    position: absolute;
+    opacity: 0;
+    scale: 0;
+    background-color: #FF5F38;
+    border-radius: 50%;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+
+#page4-cursor h4{
+    font-weight: 200;
+}
+
+.text-elem{
+    height: 35vh;
+    width: 25vw;
+    background-color: #F5F5F5;
+    color: black;
+    /* border: 1px solid black; */
+    position: relative;
+    padding: 2vw 1.8vw;
+}
+
+.text-elem h1{
+    font-size: 4vw;
+    font-weight: 1500;
+}
+
+.text-elem :nth-child(2){
+    margin-top: 1.6vw;
+    font-weight: 100;
+}
+
+.text-elem :nth-child(3){
+    font-size: 1.1vw;
+    position: absolute;
+    bottom: 5%;
+    opacity: 0.5;
+}
+
+
+#hit-5{
+    height: 80vh;
+    width: 100%;
+    color: black;
+    padding: 1vw 2vw;
+}
+
+#hit-5 #book-section{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1vw 0;
+}
+
+#book-section .book-sections{
+    height: 100%;
+    width: 32%;
+}
+
+.book-sections img{
+    width: 100%;
+    height: 70%;
+     object-fit: cover;
+}
+
+.book-sections a{
+    text-decoration: none;
+    margin-top: 1.6vw;
+    display: block;
+    font-size: 1.2vw;
+    color: black;
+}
+
+.book-sections h3{
+    font-weight: 100;
+    font-size: 1.3vw;
+}
+
+#hit-6{
+    height: 80vh;
+    width: 100%;
+    color: black;
+}
+#hit-6 h1{
+    padding: 0 3.8vw;
+}
+
+#hit-6 #visit-section{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 3.8vw;
+    margin-top: 1.5vw;
+}
+
+#visit-section .visit-sections{
+    height: 100%;
+    width: 32%;
+    position: relative;
+}
+
+.visit-sections video{
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+}
+
+.visit-sections img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.7s;
+}
+
+.visit-sections:hover.visit-sections img{
+    opacity: 0;
+}
+
+.visit-sections h3{
+    font-weight: 100;
+    font-size: 1.3vw;
+}
+
+.visit-sections a{
+    text-decoration: none;
+    margin-top: 1.6vw;
+    display: block;
+    font-size: 1.2vw;
+    color: black;
+}
+
+#hit-7{
+    height: 140vh;
+    width: 100%;
+    background-color: black;
+    position: relative;
+}
+
+#hit-7 #upper-section{
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6vw;
+}
+
+#upper-section a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#upper-section i{
+    font-size: 4.3vw;
+}
+
+#upper-section h3{
+    font-size: 1.2vw;
+    text-transform: capitalize;
+}
+
+#lower-div{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* border-bottom: 1px solid #fff; */
+}
+
+#hit-7 hr{
+    width: 93%;
+    margin-left: 3%;
+    opacity: 0.7;
+}
+
+#lower-div .footer-text{
+    height: 100%;
+    width: 15%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.8vw;
+    padding: 2vw 2.7vw;
+}
+
+.footer-text p{
+    font-size: 1.2vw;
+    opacity: 0.8;
+    position: relative;
+}
+
+.footer-text p:hover{
+    opacity: 1;
+}
+
+.footer-text p::after{
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: white;
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    transition: all 0.8s ease;
+}
+
+.footer-text p:hover::after{
+    animation-name: hover-animation;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hover-animation {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+#footer-final{
+    height: 46vh;
+    width: 100%;
+    margin-top: 1vw;
+    display: flex;
+}
+
+#footer-final #final-text{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8vw;
+    padding-top: 2vw;
+}
+
+#final-text .final-text-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#footer-final #final-icon{
+    height: 100%;
+    width: 35%;
+    display: flex;
+    gap: 1.8vw;
+    justify-content: flex-end;
+    padding-right: 3.3vw;
+}
+
+#final-icon a{
+    text-decoration: none;
+    color: white;
+}
+
+#final-icon i{
+    font-size: 3vw;
+}
+
+.final-text-div p{
+    font-size: 1.2vw;
+    opacity: 0.8;
+}
+
+
+.final-text-div p{
+    font-size: 1.2vw;
+    opacity: 0.8;
+    position: relative;
+}
+
+.final-text-div p:hover{
+    opacity: 1;
+}
+
+.final-text-div p::after{
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: white;
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    transition: all 0.8s ease;
+}
+
+.final-text-div p:hover::after{
+    animation-name: hover-animation;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
