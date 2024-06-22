@@ -24,7 +24,7 @@ html,body{
     justify-content: center;
     color: #fff;
     gap: 10px;
-    display: none;
+    /* display: none; */
   }
 
   #loader h3{
@@ -39,10 +39,11 @@ html,body{
     position: relative;
 }
 
-#hit1 video{
-    height: 100%;
+video{
+    height: 106vh;
     width: 100%;
     object-fit: cover;
+    z-index: 1;
 }
 
 
@@ -51,12 +52,18 @@ nav{
     position: fixed;
     display: flex;
     align-items: flex-start;
-    height: 12vh;
+    height: 13vh;
     width: 100%;
-    padding: 2vw 10.4vw;
+    padding: 1vw 10.4vw;
     justify-content: space-between;
     z-index: 10;
     background-color: transparent;
+    backdrop-filter: blur(20px);
+}
+
+#nav-logo img{
+        height: 71px;
+        width: 155px;
 }
 
 nav h1{
@@ -67,13 +74,13 @@ nav .nav-part2{
     display: flex;
     gap: 2vw;
     align-items: flex-start;
-    padding: 1vh 0;
+    padding: 3.5vh 0;
     position: relative;
     z-index: 10;
 }
 
 nav .nav-part2 h4{
-    font-size: 0.9vw;
+    font-size: 1.1vw;
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 2.6vw;
@@ -92,22 +99,22 @@ nav .nav-part2 h4{
     display: inline-block;
 }
 
-nav button{
-    background-color: #0DA34E;
+.icons {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    padding: 12px 14px;
-    font-size: 0.85vw;
-    text-transform: uppercase;
-    font-weight: 700;
-    border-radius: 50px;
-    border: none;
-}
+    gap: 10px;
+    padding: 1.5vh 0;
+    background: transparent;
+    margin-top: 13px;
 
-nav button svg{
-    height: 0.85vw;
-    margin-left: 1.6vw;
-}
+  }
+  
+  .icons {
+    background: transparent;
+    font-size: 17px;
+    margin-left: 70px;
+  }
 
 #nav-bottom{
     width: 80%;
@@ -197,8 +204,8 @@ nav button svg{
 .slider .list .item img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    filter: brightness(70%);
+    /* object-fit: cover; */
+    filter: brightness(50%);
 }
 .slider .list .item .content{
     position: absolute;
@@ -220,7 +227,7 @@ nav button svg{
     line-height: 1.2em;
 }
 .slider .list .item .type{
-    color: rgba(30, 186, 129);
+    color: #f2f2f2;
 }
 
 .slider .list .item .content .description{
@@ -236,17 +243,36 @@ nav button svg{
 }
 .slider .list .item .button button{
     border: none;
-    background-color: #14ff72cb;
+    background-color: #474848;
     font-family: Poppins;
     font-weight: 500;
     cursor: pointer;
     transition: 0.4s;
     letter-spacing: 2px;
+
+    /* -- */
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.1),
+            -6px -6px 10px -1px rgba(40, 40, 40, 0.7);
+    border: 1px solid rgba(0,0,0,0);
+    cursor: pointer;
+    transition: transform 0.5s;
 }
 
 
 .slider .list .item .button button:hover{
     letter-spacing: 3px;
+
+    /* ---------------- */
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+	      inset -4px -4px 6px -1px rgba(252, 249, 249, 0.7),
+	      -0.5px -0.5px 0px rgb(228, 228, 228),
+	      0.5px 0.5px 0px rgba(0,0,0,0.15),
+	      0px 12px 10px -10px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.1);
+  transform: translateY(0.5em);
+  background-color: #fff;
+    color: #000;
 }
 .slider .list .item .button button:nth-child(2){
     background-color: transparent;
@@ -262,7 +288,7 @@ nav button svg{
 .thumbnail{
     position: absolute;
     bottom: 50px;
-    left: 50%;
+    left: 43%;
     width: max-content;
     z-index: 100;
     display: flex;
@@ -270,8 +296,8 @@ nav button svg{
 }
 
 .thumbnail .item{
-    width: 150px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     flex-shrink: 0;
     position: relative;
 }
@@ -288,7 +314,7 @@ nav button svg{
 /* nextPrevArrows Section  */
 .nextPrevArrows{
     position: absolute;
-    top: 80%;
+    top: 76%;
     right: 52%;
     z-index: 100;
     width: 300px;
@@ -301,13 +327,19 @@ nav button svg{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #14ff72cb;
+    background-color: #505151;
     border: none;
     color: #fff;
     font-family: monospace;
     font-weight: bold;
     transition: .5s;
     cursor: pointer;
+
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+	      -6px -6px 10px -1px rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0);
+  cursor: pointer;
+  transition: transform 0.5s;
 }
 .nextPrevArrows button:hover{
     background-color: #fff;
@@ -472,16 +504,35 @@ nav button svg{
     position: relative;
     font-family: model;
     color: black;
+    
+
+ 
+
+/* background: #000000;   */
+background: -webkit-linear-gradient(to right, #434343, #000000); 
+background: linear-gradient(to right, #434343, #000000);
+
+
+background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgb(27, 24, 117) 93.2% );
+
+background-image: linear-gradient( 111.4deg,  #000000 6.5%, #130F40 93.2% );
+
+/* background-image: linear-gradient( 111.4deg,  #000000 6.5%, #2C3E50  93.2% ); */
+
+background-image: linear-gradient( 94.3deg,  rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% );
+
+background-image: linear-gradient( 111.4deg,  #111 6.5%, #313131  93.2% );
+
     padding-top: 5vw;
 }
 
 .model{
-    height: 80vh;
+    height: 70vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3vw 4vw;
+    padding: 2vw 3vw;
 }
 
 .model-img{
@@ -509,32 +560,40 @@ nav button svg{
     font-size: 1.4vw;
     padding: 1vw 0;
     font-weight: 400;
+    color: rgb(250, 243, 231);
 }
 
 .model-text h5{
     font-size: 1.1vw;
     padding-top: 1vw;
-    opacity: 0.6;
+    opacity: 0.8;
     text-transform: uppercase;
     font-weight: 300;
+    color:white;
+
 }
 
 .model-text h1{
     font-size: 2.8vw;
     line-height: 3.1vw;
     font-weight: 300;
+    color: rgb(250, 243, 231);
+
 }
 
 #model-btn>h4{
     padding: 10px 20px;
-    border: 1px solid #000;
+    border: 1px solid rgb(250, 243, 231);
     border-radius: 50px;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.838);
+    color: rgb(250, 243, 231);
     position: relative;
     font-size: 18px;
     transition: all ease 0.4s;
     overflow: hidden;
+    color: rgb(250, 243, 231);
+
 }
 
 #model-btn>h4::after{
@@ -552,6 +611,7 @@ nav button svg{
 #model-btn>h4:hover::after{
     bottom: 0;
     border-radius: 0;
+    
 }
 
 #model-btn>h4 a {
@@ -559,10 +619,13 @@ nav button svg{
     text-decoration: none;
     position: relative;
     z-index: 9;
+    color: rgb(250, 243, 231);
+    
 }
 
 #model-btn>h4:hover a{
     color: #fff;
+    
 }
 
 /* ------------ Greeting Section ------------ */
@@ -570,7 +633,7 @@ nav button svg{
 #hit-4{
     min-height: 100vh;
     width: 100%;
-    background-color:#FFFFFF;
+    background-color:#101116;
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -584,7 +647,7 @@ nav button svg{
     position: absolute;
     opacity: 0;
     scale: 0;
-    background-color: #FF5F38;
+    background-color: #EDEEF2;
     border-radius: 50%;
     z-index: 9;
     display: flex;
@@ -595,6 +658,7 @@ nav button svg{
 
 #page4-cursor h4{
     font-weight: 200;
+    color: black;
 }
 
 .text-elem{
@@ -605,6 +669,22 @@ nav button svg{
     /* border: 1px solid black; */
     position: relative;
     padding: 2vw 1.8vw;
+    background: #282933;
+    border-radius: 16px;
+    color: #9498b7;
+
+}
+.text-elem:hover{
+    background: #383947;
+    color: #ccd0f0;
+box-shadow:  16px 16px 12px #212229,
+             -11px -11px 11px #5C5F76;
+             scale: 1.03;
+
+             border-radius: 9px;
+/* background: #636363;
+box-shadow: inset 16px 16px 29px #323232 ,
+            inset -16px -16px 29px #5a5a5a; */
 }
 
 .text-elem h1{
@@ -626,10 +706,14 @@ nav button svg{
 
 
 #hit-5{
-    height: 80vh;
+    height: 70vh;
     width: 100%;
     color: black;
-    padding: 1vw 2vw;
+    padding: 2vw 2vw;
+    background-color: #B4B4B4;
+}
+#hit-5 h1{
+    color: rgb(0, 0, 0);
 }
 
 #hit-5 #book-section{
@@ -644,6 +728,7 @@ nav button svg{
 #book-section .book-sections{
     height: 100%;
     width: 32%;
+    background-color: #B4B4B4;
 }
 
 .book-sections img{
@@ -665,10 +750,15 @@ nav button svg{
     font-size: 1.3vw;
 }
 
+
+
+/* -----------------------hit-6------------------ */
 #hit-6{
-    height: 80vh;
+    height: 75vh;
     width: 100%;
     color: black;
+    background-color: #EDE0D9;
+    padding:20px
 }
 #hit-6 h1{
     padding: 0 3.8vw;
@@ -707,7 +797,7 @@ nav button svg{
     transition: all ease 0.7s;
 }
 
-.visit-sections:hover.visit-sections img{
+ .img-hit-6:hover{
     opacity: 0;
 }
 
@@ -725,7 +815,7 @@ nav button svg{
 }
 
 #hit-7{
-    height: 140vh;
+    height: 125vh;
     width: 100%;
     background-color: black;
     position: relative;
@@ -756,7 +846,7 @@ nav button svg{
 }
 
 #lower-div{
-    height: 70vh;
+    height: 60vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -820,7 +910,7 @@ nav button svg{
 }
 
 #footer-final{
-    height: 46vh;
+    height: 26vh;
     width: 100%;
     margin-top: 1vw;
     display: flex;
