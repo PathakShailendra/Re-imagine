@@ -1,0 +1,306 @@
+/* ----------------- Page 1 Responsive------------------- */
+
+
+@media (max-width:600px){
+    #main{
+        width: 100vw;
+    }
+
+    #loader h3{
+        font-weight: 200;
+        font-size: 4vw;
+      }
+
+    #hit-1{
+        width: 100%;
+        position: relative;
+    }
+    nav{
+        height:10vh;
+        width: 100vw;
+        z-index: 10;
+        background-color: transparent;
+    }
+    #hit1 video{
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    /* -------------------------------------------- */
+
+             /* paste navbar code here */
+
+    /* ----------------------------------------------- */
+
+    #about{
+        height: 100vh;
+        width: 100vw;
+      }
+
+      #page21{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        gap: 1vw;
+    }
+
+    #page21 h2 {
+        font-size: 8vw;
+        font-weight: 700;
+      }
+      #page21 p{
+        font-size: 2.5vw;
+      }
+
+      #page21 .h21::before{
+        display: none;
+    }
+    #page21 .h22::before{
+        display: none;
+    }
+
+    /* ------------------Slider Section Styling--------------------------- */
+
+    .slider{
+        height: 100vh;
+        width: 100vw;
+    }
+    .slider .list .item img{
+        object-fit: contain;
+    }
+
+    .slider .list .item .content{
+        position: absolute;
+        top: 50%;
+        width: 80vw;
+        /* max-width: 900%; */
+        left: 50%;
+        transform: translateX(-50%);
+        padding-right: 10%;
+    }
+
+    .slider .list .item .content .description{
+        display: none;
+    }
+
+    .slider .list .item .content .title,
+    .slider .list .item .content .type{
+    font-size: 2em;
+    line-height: 1.1em;
+    }
+
+    .slider .list .item .button button{
+        border: 1.5px solid black;
+        height: 5.5vw;
+        width: 17vw;
+        border-radius: 50px;
+        letter-spacing: 1px;
+        font-size: 2vw;
+    }
+
+    .thumbnail{
+        position: absolute;
+        bottom: 120px;
+        left: 55%;
+        gap: 15px;
+    }
+
+    .thumbnail .item{
+        width: 15vw;
+        height: 20vw;
+    }
+    .nextPrevArrows{
+        top: 70%;
+        right: 64%;
+        width: 150px;
+        gap: 7px;
+    }
+
+    .nextPrevArrows button{
+        width: 35px;
+        height: 35px;
+        border: 1.2px solid black;
+    }
+    
+    /* -------------------------------------------------------------------- */
+
+    #models{
+        width: 100%;
+        padding-top: 5vw;
+    }
+    .model{
+        height: 80vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .model-img{
+        height: 40vh;
+        width: 80%;
+    }
+    .model-img img{
+        border-radius: 7px;
+    }
+    .model-text{
+        height: 50vh;
+        width: 100%;
+        align-items: flex-start;
+        gap: 1vw;
+        padding: 3vw 8.7vw;
+    }
+    .model-text h3{
+        font-size: 2.5vw;
+        padding: 1vw 0;
+    }
+    .model-text h5{
+        font-size: 2vw;
+        font-weight: 400;
+    }
+    .model-text h1{
+        font-size: 3.5vw;
+        line-height: 3vw;
+        font-weight: 400;
+    }
+    #model-btn>h4{
+        padding: 5px 10px;
+        font-weight: 4400;
+        font-size: 2vw;
+    }
+    #page4-cursor h4{
+        padding: 1vw 2vw;
+        font-size: 1.7vw;
+        font-weight: 100;
+    }
+    #hit-4{
+        max-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2vw;
+        padding: 5vw 9vw; 
+    }
+    .text-elem{
+        height: 28vh;
+    }
+    .text-elem :nth-child(2){
+        font-size: 2.5vw;
+    }
+    .text-elem :nth-child(3){
+        font-size: 1.9vw;
+    }
+    #hit-5{
+        height: 170vh;
+        padding: 1vw 2vw;
+    }
+    #hit-5 #book-section{
+        height: 70vh;
+        flex-direction: column;
+    }
+    #book-section .book-sections{
+        height: 80%;
+        width: 80%;
+    }
+    .book-sections img{
+        width: 100%;
+        height: 70%;
+        border-radius: 7px;
+    }
+    
+    .book-sections a{
+    margin-top: 1.6vw;
+    font-size: 2.5vw;
+    border: 1px solid black;
+    display: inline-block;
+    padding: 1vw 1vw;
+    border-radius: 50px;
+    opacity: 0.6;
+    }
+    .book-sections a:hover{
+        scale: 1.05;
+        opacity: 1;
+    }
+    .book-sections h3{
+        font-size: 3vw;
+        margin-top: 1vw;
+    }
+    #hit-5 h1{
+        border-bottom: 2px solid black;
+        transform: translateX(20%);
+        margin-bottom: 5vw;
+        display: inline-block;
+    }
+    #hit-6{
+        height: 200vh;
+    }
+    #hit-6 #visit-section{
+        width: 100%;
+        height: 90%;
+        flex-direction: column  ;
+        padding: 1vw 1vw;
+    }
+    #visit-section .visit-sections{
+        height: 35%;
+        width: 80%;
+    }
+    .visit-sections h3{
+        font-size: 2.8vw;
+        margin-top: 1vw;
+    }
+    .visit-sections a{
+        font-size: 2.1vw;
+    }
+    .visit-sections img{
+        border-radius: 7px;
+    }
+    .visit-sections video{
+        border-radius: 7px;
+    }
+    .visit-sections:hover.visit-sections img{
+        opacity: 0;
+    }
+    #hit-6 h1{
+        transform: translateX(31%);
+        margin: 6vw 0;
+        border-bottom: 2px solid black;
+        display: inline-block;
+        padding: 0 0;
+    }
+    #hit-7{
+        margin-top: 2vw;
+        height: 100vh;
+    }
+    #hit-7 #upper-section{
+        height: 15vh;
+    }
+    #upper-section i{
+        font-size: 6vw;
+    }
+    #upper-section h3{
+        font-size: 2vw;
+    }
+    #lower-div{
+        height: 60vh;
+    }
+    .footer-text p{
+        font-size: 1.8vw;
+        opacity: 0.8;
+    }
+    .footer-text h3{
+        font-size: 2.3vw;
+    }
+    .footer-text p::after{
+        display: none;
+    }
+    #footer-final{
+        height: 40vh;
+        margin-top: 1.5vw;
+    }
+    .final-text-div p{
+        font-size: 1.6vw;
+        padding: 0 1vw;
+        opacity: 0.8;
+    }
+    .final-text-div p::after{
+        display: none;
+    }
+}
